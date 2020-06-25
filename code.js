@@ -20,7 +20,18 @@ var sayHello = function(name) {
         return "Hello, World!";
     } else if (name === "true") {
         return "Hello, World!";
+    } else if (name === "boolean") {
+        return "boolean";
     } else {
         return "";
+    }
+}
+var isFive = function(name) {
+    if (name === 5) {
+        return true;
+    } else if (name === "5") {
+            return false;
+    } else {
+        return false;
     }
 }

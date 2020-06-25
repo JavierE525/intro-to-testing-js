@@ -47,8 +47,15 @@ describe('sayHello', function() {
     it("should never return '-15' when called", function() {
         expect(sayHello()).not.toBe("-15");
     });
+});
+/////////////////////  isFive   ////////////////////////
+describe('isFive', function() {
+    it('should be a defined function', function() {
+        expect(typeof isFive).toBe('function');
+    });
+    it("should return 'boolean' when called", function() {
+        expect(typeof isFive()).toBe("boolean");
+    });
 
 
 });
-
-// tests.js, add expect(sayHello()).toBe("Hello, World!").
