@@ -23,15 +23,32 @@ describe('sayHello', function() {
     it('should return a string when called', function() {
         expect(typeof sayHello()).toBe("string");
     });
-    it('should return the string "Hello, Alex!" when executed', function() {
-        expect(sayHello("Alex")).toBe("Hello, Alex!");
-    });
     it('should return the string "Hello, Jane!" when executed', function() {
         expect(sayHello("Jane")).toBe("Hello, Jane!");
+    });
+    it('should return the string "Hello, Alex!" when executed', function() {
+        expect(sayHello("Alex")).toBe("Hello, Alex!");
     });
     it('should return the string "Hello, Pat!" when executed', function() {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
+    it('should return the string "Hello, World!" when executed', function() {
+        expect(sayHello("World")).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when executed', function() {
+        expect(sayHello("true")).toBe("Hello, World!");
+    });
+    it("should never return 'undefined' when called", function() {
+        expect(sayHello()).not.toBe(undefined);
+    });
+    it("should never return 'boolean' when called", function() {
+        expect(sayHello()).not.toBe("boolean");
+    });
+    it("should never return '-15' when called", function() {
+        expect(sayHello()).not.toBe("-15");
+    });
+
 
 });
 
+// tests.js, add expect(sayHello()).toBe("Hello, World!").
