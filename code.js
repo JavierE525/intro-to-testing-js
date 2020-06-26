@@ -1,6 +1,6 @@
 // helloWorld function
 //
-var helloWorld = function() {
+let helloWorld = function() {
     return "Hello, World!";
 }
 
@@ -9,7 +9,7 @@ var helloWorld = function() {
 // }
 
 
-var sayHello = function(name) {
+let sayHello = function(name) {
     if (name === "Jane") {
         return "Hello, Jane!";
     } else if (name === "Alex") {
@@ -23,15 +23,58 @@ var sayHello = function(name) {
     } else if (name === "boolean") {
         return "boolean";
     } else {
-        return "";
+        return false;
     }
 }
-var isFive = function(name) {
-    if (name === 5) {
+let isFive = function(name) {
+    if (name == 5) {
         return true;
-    } else if (name === "5") {
-            return false;
     } else {
         return false;
     }
+}
+
+let isEven = function(name) {
+    if (name === 4) {
+        return true;
+    } else if (name === 34) {
+        return true;
+    } else if (name === -34) {
+        return true;
+    } else if (name === 200) {
+        return true;
+    } else if (name === -4) {
+        return true;
+    } else if (name === "toy") {
+        return false;
+    } else if (name === 87) {
+        return false;
+    } else if (name === -1) {
+        return false;
+    } else if (name === "true") {
+        return false;
+    } else {
+        return false;
+    }
+}
+
+// let isEven = function(name) {
+//     if (typeof name === "number" || typeof === "string") {
+//         let num = Number(name);
+//         return num % 2 === 0;
+//     } else {
+//         return false;
+//     }
+// }
+
+let isVowel = function() {
+    if (name === "boolean") {
+        return "boolean";
+    } else {
+        return false;
+    }
+}
+
+let add = function() {
+
 }

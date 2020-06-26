@@ -20,9 +20,6 @@ describe('sayHello', function() {
     it('should be a defined function', function() {
         expect(typeof sayHello).toBe('function');
     });
-    it('should return a string when called', function() {
-        expect(typeof sayHello()).toBe("string");
-    });
     it('should return the string "Hello, Jane!" when executed', function() {
         expect(sayHello("Jane")).toBe("Hello, Jane!");
     });
@@ -56,6 +53,86 @@ describe('isFive', function() {
     it("should return 'boolean' when called", function() {
         expect(typeof isFive()).toBe("boolean");
     });
+    it("should return true when the imput is the number 5", function() {
+        expect(isFive(5)).toBe(true);
+    });
+    it("should return true when the imput is a  string 5", function() {
+        expect(isFive("5")).toBe(true);
+    });
+    it("should return false when the imput is invalid-'Bingo'", function() {
+        expect(isFive("Bingo")).toBe(false);
+    });
+    it("should return false when the imput is invalid-'1'", function() {
+        expect(isFive(1)).toBe(false);
+    });
+    it("should return false when the imput is invalid-'[]'", function() {
+        expect(isFive([])).toBe(false);
+    });
+    it("should return false when the imput is invalid-'-25'", function() {
+        expect(isFive(-25)).toBe(false);
+    });
+});
 
+/////////////////////  isEven   ////////////////////////
+describe('isEven', function() {
+    it('should be a defined function', function() {
+        expect(typeof isEven).toBe('function');
+    });
+    it("should return 'boolean' when called", function() {
+        expect(typeof isEven()).toBe("boolean");
+    });
+    it("should return true when the input is even", function() {
+        expect(isEven(4)).toBe(true);
+        expect(isEven(34)).toBe(true);
+        expect(isEven(-34)).toBe(true);
+        expect(isEven(200)).toBe(true);
+    });
+    it("should false when the input is not even", function() {
+        expect(isEven("toy")).toBe(false);
+        expect(isEven(87)).toBe(false);
+        expect(isEven(-1)).toBe(false);
+        expect(isEven("true")).toBe(false);
+    });
+
+});
+/////////////////////  isVowel   ////////////////////////
+describe('isVowel', function() {
+    it('should be a defined function', function() {
+        expect(typeof isVowel).toBe('function');
+    });
+    it("should return 'boolean' when called", function() {
+        expect(typeof isVowel()).toBe("boolean");
+    });
+    it("should return true if we find a CAPITAL vowel", function() {
+        expect(isVowel("A")).toBe(true);
+        expect(isVowel("E")).toBe(true);
+        expect(isVowel("I")).toBe(true);
+        expect(isVowel("O")).toBe(true);
+        expect(isVowel("U")).toBe(true);
+    });
+    it("should return true if we find a LOWER CASE vowel", function() {
+        expect(isVowel("a")).toBe(true);
+        expect(isVowel("e")).toBe(true);
+        expect(isVowel("i")).toBe(true);
+        expect(isVowel("o")).toBe(true);
+        expect(isVowel("u")).toBe(true);
+    });
+    it("should return true if we find a LOWER CASE vowel", function() {
+        expect(isVowel("1")).toBe(false);
+        expect(isVowel(1)).toBe(false);
+        expect(isVowel(0)).toBe(false);
+        expect(isVowel("test")).toBe(false);
+        expect(isVowel("Test1")).toBe(false);
+        expect(isVowel(true)).toBe(false);
+        expect(isVowel(false)).toBe(false);
+        expect(isVowel()).toBe(false);
+    });
+});
+
+/////////////////////  add   ////////////////////////
+describe('add', function() {
+    it('should be a defined function', function() {
+        expect(typeof add).toBe('function');
+    });
 
 });
