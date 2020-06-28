@@ -58,23 +58,28 @@ let isEven = function(name) {
     }
 }
 
-// let isEven = function(name) {
-//     if (typeof name === "number" || typeof === "string") {
-//         let num = Number(name);
-//         return num % 2 === 0;
-//     } else {
-//         return false;
-//     }
-// }
-
-let isVowel = function() {
-    if (name === "boolean") {
-        return "boolean";
-    } else {
-        return false;
-    }
+let isVowel = function (input) {
+    let vowels = 'aeiou';
+    return (
+        typeof input === 'string'
+            // check for vowels in the string...
+            && vowels.indexOf(input.toLowerCase()) !== -1);
 }
 
-let add = function() {
 
+
+
+let add = function(x, y) {
+    let numbX = Number(x);
+    let numbY = Number(y);
+
+    if(    numbX !== undefined
+        && numbY !== undefined
+        && !isNaN(numbY)
+        && !isNan(numbX))
+    {
+        return numbX + numbY;
+    } else {
+        return NaN;
+    }
 }

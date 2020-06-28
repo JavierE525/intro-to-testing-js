@@ -93,8 +93,8 @@ describe('isEven', function() {
         expect(isEven(-1)).toBe(false);
         expect(isEven("true")).toBe(false);
     });
-
 });
+
 /////////////////////  isVowel   ////////////////////////
 describe('isVowel', function() {
     it('should be a defined function', function() {
@@ -111,9 +111,9 @@ describe('isVowel', function() {
         expect(isVowel("U")).toBe(true);
     });
     it("should return true if we find a LOWER CASE vowel", function() {
-        expect(isVowel("a")).toBe(true);
+        expect(isVowel("A")).toBe(true);
         expect(isVowel("e")).toBe(true);
-        expect(isVowel("i")).toBe(true);
+        expect(isVowel("I")).toBe(true);
         expect(isVowel("o")).toBe(true);
         expect(isVowel("u")).toBe(true);
     });
@@ -134,5 +134,21 @@ describe('add', function() {
     it('should be a defined function', function() {
         expect(typeof add).toBe('function');
     });
-
+    it("should return the addition of any two numbers", function() {
+        expect(add(5, 2)).toBe(7);
+        expect(add(8, 4)).toBe(12);
+        expect(add(-3, 5)).toBe(2);
+        expect(add("3", 5)).toBe(8);
+        expect(add("-2", "12")).toBe(0);
+    });
+    it("should return NaN for all invalid inputs", function() {
+        expect(isVowel("1")).toBe(false);
+        expect(isVowel(1)).toBe(false);
+        expect(isVowel(0)).toBe(false);
+        expect(isVowel("test")).toBe(false);
+        expect(isVowel("Test1")).toBe(false);
+        expect(isVowel(true)).toBe(false);
+        expect(isVowel(false)).toBe(false);
+        expect(isVowel()).toBe(false);
+    });
 });
