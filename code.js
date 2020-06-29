@@ -70,15 +70,15 @@ let isVowel = function (input) {
 
 
 let add = function(x, y) {
-    let numbX = Number(x);
-    let numbY = Number(y);
+    let numX = Number(x);
+    let numY = Number(y);
 
-    if(    numbX !== undefined
-        && numbY !== undefined
-        && !isNaN(numbY)
-        && !isNan(numbX))
+    if(    numX !== undefined
+            && numY !== undefined
+            && !isNaN(numY)
+            && !isNaN(numX))
     {
-        return numbX + numbY;
+        return numX + numY;
     } else {
         return NaN;
     }

@@ -117,7 +117,7 @@ describe('isVowel', function() {
         expect(isVowel("o")).toBe(true);
         expect(isVowel("u")).toBe(true);
     });
-    it("should return true if we find a LOWER CASE vowel", function() {
+    it("should return false if we do not find a vowel", function() {
         expect(isVowel("1")).toBe(false);
         expect(isVowel(1)).toBe(false);
         expect(isVowel(0)).toBe(false);
@@ -138,17 +138,13 @@ describe('add', function() {
         expect(add(5, 2)).toBe(7);
         expect(add(8, 4)).toBe(12);
         expect(add(-3, 5)).toBe(2);
-        expect(add("3", 5)).toBe(8);
-        expect(add("-2", "12")).toBe(0);
+        expect(add(3, 5)).toBe(8);
+        expect(add(-2, "12")).toBe(10);
     });
     it("should return NaN for all invalid inputs", function() {
-        expect(isVowel("1")).toBe(false);
-        expect(isVowel(1)).toBe(false);
-        expect(isVowel(0)).toBe(false);
-        expect(isVowel("test")).toBe(false);
-        expect(isVowel("Test1")).toBe(false);
-        expect(isVowel(true)).toBe(false);
-        expect(isVowel(false)).toBe(false);
+        expect(isVowel("test", "test")).toBe(false);
+        expect(isVowel("test", 1)).toBe(false);
+        expect(isVowel(1, "test")).toBe(false);
         expect(isVowel()).toBe(false);
     });
 });
