@@ -140,10 +140,13 @@ describe('add', function() {
         expect(add(-3, 5)).toBe(2);
         expect(add(3, 5)).toBe(8);
         expect(add(-2, "12")).toBe(10);
+        expect(add(-4, "12")).toBe(8);
     });
     it("should return NaN for all invalid inputs", function() {
         expect(isVowel("test", "test")).toBe(false);
         expect(isVowel("test", 1)).toBe(false);
+        expect(isVowel(-4, "test")).toBe(false);
+        expect(isVowel("test", "1")).toBe(false);
         expect(isVowel(1, "test")).toBe(false);
         expect(isVowel()).toBe(false);
     });
