@@ -106,7 +106,7 @@ function helloWorld() {
 ```js
 // function expression syntax (assigning an anonymous function to a variable)
 const helloWorld = function() {
-    return "Hello, World!";
+    return "Hello, orld!";
 }
 ```
 

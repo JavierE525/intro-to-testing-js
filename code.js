@@ -1,7 +1,7 @@
 // helloWorld function
 //
 let helloWorld = function() {
-    return "";
+    return "Hello, World!";
 }
 
 // var sayHello = function(name) {
